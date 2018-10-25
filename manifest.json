@@ -1,6 +1,6 @@
 {
-  "name": "Simple Weather",
-  "short_name": "SW",
+  "name": "ShareParser",
+  "short_name": "SP",
   "icons": [
       {
           "src": "./assets/icons/android-chrome-192x192.png",
