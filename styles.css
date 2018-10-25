@@ -1,0 +1,21 @@
+body, html {
+    font-family: 'Roboto';
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background-color: #ecf0f1;
+    flex-direction: column;
+}
+
+.app {
+    font-size: 4em;
+    padding-top: 10px;
+}
+
+.wi {
+    margin-top: -1em;
+    font-size: 3em;
+    line-height: 1.5em;
+}
