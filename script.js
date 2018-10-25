@@ -21,13 +21,11 @@ if ('serviceWorker' in navigator) {
 
 
 var parsedUrl = new URL(window.location.toString());
-console.log('Title shared: ' + parsedUrl.searchParams.get('name'));
-console.log('Text shared: ' + parsedUrl.searchParams.get('description'));
-console.log('URL shared: ' + parsedUrl.searchParams.get('link'));
+const text = parsedUrl.searchParams.get('description');
 
+if (text) {
+    fetch(`https://wt-info-dkunin_ru-0.sandbox.auth0-extend.com/open-graph-scrapper?url=${text}`).then(res => res.json()).then(result => {
+        appNode.innerHTML = `<a href="http://rarbgmirror.xyz/torrents.php?search=${result.title}">${result.title}</a>`
+    })
+}
 
-appNode.innerHTML = `
-    <div>Name:${parsedUrl.searchParams.get('name')}</div>
-    <div>description:${parsedUrl.searchParams.get('description')}</div>
-    <div>link:${parsedUrl.searchParams.get('link')}</div>
-`;
